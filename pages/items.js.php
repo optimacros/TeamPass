@@ -3251,6 +3251,7 @@ $var['hidden_asterisk'] = '<i class="fas fa-asterisk mr-2"></i><i class="fas fa-
 
                     // Set actual folder from teampassItem
                     $('#form-item-folder').val(store.get('teampassItem').folder);
+                    console.log($('#form-item-folder').html());
                 } else {
                     toastr.remove();
                     toastr.error(
