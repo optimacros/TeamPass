@@ -3248,6 +3248,9 @@ $var['hidden_asterisk'] = '<i class="fas fa-asterisk mr-2"></i><i class="fas fa-
 
                     // remove ROOT option if exists
                     $('#form-item-copy-destination option[value="0"]').remove();
+
+                    // Set actual folder from teampassItem
+                    $('#form-item-folder').val(store.get('teampassItem').folder);
                 } else {
                     toastr.remove();
                     toastr.error(
