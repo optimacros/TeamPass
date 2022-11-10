@@ -596,6 +596,10 @@ foreach ($rows as $reccord) {
                 <div class="card-body" id="list-group-item-main">
                     <ul class="list-group list-group-unbordered mb-3">
                         <li class="list-group-item">
+                            <b>ID</b>
+                            <span id="card-item-id" class="float-right ml-1"></span>
+                        </li>
+                        <li class="list-group-item">
                             <b><?php echo langHdl('pw'); ?></b>
                             <button type="button" class="float-right btn btn-outline-info btn-sm btn-copy-clipboard" id="card-item-pwd-button">
                                 <i class="far fa-copy"></i>

@@ -4378,6 +4378,7 @@ $var['hidden_asterisk'] = '<i class="fas fa-asterisk mr-2"></i><i class="fas fa-
                 $('#card-item-login').html(data.login);
                 $('#form-item-login, #form-item-suggestion-login, #form-item-server-login').val(data.login);
 
+                $('#card-item-id').text(data.id);
                 $('#card-item-email').text(data.email);
                 $('#form-item-email, #form-item-suggestion-email').val(data.email);
                 $('#card-item-url').html(data.url);
