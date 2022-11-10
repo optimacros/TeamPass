@@ -3250,6 +3250,7 @@ $var['hidden_asterisk'] = '<i class="fas fa-asterisk mr-2"></i><i class="fas fa-
                     $('#form-item-copy-destination option[value="0"]').remove();
 
                     // Set actual folder from teampassItem
+                    console.log(store.get('teampassItem').folder);
                     $('#form-item-folder').val(store.get('teampassItem').folder).change();
                     console.log($('#form-item-folder').html());
                 } else {
