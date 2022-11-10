@@ -836,6 +836,39 @@ $var['hidden_asterisk'] = '<i class="fas fa-asterisk mr-2"></i><i class="fas fa-
             //
             // > END <
             //
+        } else if ($(this).data('item-action') === 'copy_link') {
+            if (debugJavascript === true) console.info('COPY ITEM LINK');
+            toastr.remove();
+
+            const itemId = store.get('teampassItem').id;
+
+            navigator.clipboard.writeText(
+                `<?php echo $SETTINGS['cpassman_url']; ?>/index.php?page=items&group=0&id=${itemId}`
+            ).then(
+                () => {
+                    toastr.success(
+                        '<?php echo langHdl('success'); ?>',
+                        '',
+                        {
+                            timeOut: 1000
+                        }
+                    );
+                },
+                () => {
+                    toastr.error(
+                        '<?php echo langHdl('error_unknown'); ?>',
+                        '',
+                        {
+                            timeOut: 5000,
+                            progressBar: true
+                        }
+                    );
+                }
+            );
+
+            //
+            // > END <
+            //
         } else if ($(this).data('item-action') === 'otv') {
             if (debugJavascript === true) console.info('SHOW OTV ITEM');
             toastr.remove();
