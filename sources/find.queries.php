@@ -353,7 +353,7 @@ if (isset($_GET['type']) === false) {
         } else {
             $txt = str_replace(['\n', '<br />', '\\'], [' ', ' ', '', ' '], strip_tags($record['description']));
             if (strlen($txt) > 50) {
-                $sOutputItem .= '"' . base64_encode(substr(stripslashes(preg_replace('~/<[\/]{0,1}[^>]*>\//|[ \t]/~', '', $txt)), 0, 50)) . '", ';
+                $sOutputItem .= '"' . base64_encode(mb_substr(stripslashes(preg_replace('~/<[\/]{0,1}[^>]*>\//|[ \t]/~', '', $txt)), 0, 50)) . '", ';
             } else {
                 $sOutputItem .= '"' . base64_encode(stripslashes(preg_replace('~/<[^>]*>|[ \t]/~', '', $txt))) . '", ';
             }
