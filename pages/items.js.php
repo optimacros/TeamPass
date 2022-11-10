@@ -3046,14 +3046,13 @@ $var['hidden_asterisk'] = '<i class="fas fa-asterisk mr-2"></i><i class="fas fa-
             }            
 
             // is user allowed to edit this item - overpass readonly folder
-            if (typeof store.get('teampassApplication').itemsList !== 'undefined') {
-                console.log(store.get('teampassApplication'));
+            /*if (typeof store.get('teampassApplication').itemsList !== 'undefined') {
                 var itemsList = JSON.parse(store.get('teampassApplication').itemsList);
                 userItemRight = itemsList[store.get('teampassItem').id].rights;
                 if (userItemRight > 40 && $('#form-item-folder option:selected').attr('disabled') === 'disabled') {
                     $('#form-item-folder option:selected').removeAttr('disabled');
                 }
-            }
+            }*/
 
             toastr.remove();
             // ---
