@@ -556,7 +556,7 @@ foreach ($rows as $reccord) {
                                     <a class="text-navy tp-action ml-3" href="#" data-item-action="notify"><i class="far fa-bell mr-1"></i><small><?php echo langHdl('notify'); ?></small></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="text-navy tp-action ml-3" href="#" data-item-action="copy_link"><i class="far fa-anchor mr-1"></i><small><?php echo langHdl('copy_link'); ?></small></a>
+                                    <a class="text-navy tp-action ml-3" href="#" data-item-action="copy_link"><i class="fa fa-anchor mr-1"></i><small><?php echo langHdl('copy_link'); ?></small></a>
                                 </li>
                                 <?php
                                 if (
